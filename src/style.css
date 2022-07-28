@@ -16,7 +16,7 @@
   --heart-color-bg: #fff0f1;
 
   --primary-text: #ffffff;
-  --secondary-text: #909090;
+  --secondary-text: #4e4e4e;
   --tertiary-text: #4f4f4f;
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
@@ -104,6 +104,11 @@ header {
   color: var(--primary-text);
   border-color: var(--primary-color);
   font-weight: 600;
+}
+
+.nav-link a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .nav-left {
