@@ -1,7 +1,28 @@
 // import './style.css'
 // import typescriptLogo from './typescript.svg'
 // import { setupCounter } from './counter'
+const linkList = document.querySelector<HTMLUListElement>(".link-list");
+const links = document.querySelectorAll<HTMLAnchorElement>(".nav-link");
 
+// changing active class on click
+linkList?.addEventListener("click", (event) => {
+  const target = event.target as HTMLAnchorElement | HTMLLIElement;
+
+  if (target.tagName === "LI" || target.tagName === "A") {
+    removeActiveClass();
+    if (target.tagName === "A") {
+      target.parentElement.classList.toggle("active");
+    } else {
+      target.classList.toggle("active");
+    }
+  }
+});
+
+function removeActiveClass() {
+  links.forEach((link) => {
+    link.classList.remove("active");
+  });
+}
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
