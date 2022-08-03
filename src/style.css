@@ -94,8 +94,7 @@ header {
   padding: 0 15px;
   font-weight: 400;
   cursor: pointer;
-  transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out,
-    font-weight 0.1s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out, color 0.4s ease-in-out;
 }
 
 .nav-link a {
@@ -106,13 +105,12 @@ header {
 
 .nav-link.active a {
   color: var(--primary-color);
-  font-weight: inherit;
+  font-weight: 600;
 }
 
 .nav-link.active {
   border-bottom: 3px solid var(--primary-color);
   color: var(--primary-color);
-  font-weight: 600;
 }
 
 .nav-link .icon {
@@ -197,5 +195,55 @@ header {
     background-color: #ffffff;
     --tertiary-text: #c0c0c0;
     --primary-text: #161616;
+  }
+}
+
+/* Main section styling goes here  */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr auto 5fr;
+  height: calc(100vh - 80px);
+}
+
+.wrapper.open {
+  animation-name: open;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.wrapper.close {
+  animation-name: close;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.pr-filter {
+  background-color: #ff6a6b;
+}
+
+.pr-main {
+  background-color: aqua;
+}
+
+.pr-detail {
+  background-color: #46a357;
+}
+
+@keyframes open {
+  0% {
+    grid-template-columns: 2fr auto 5fr;
+  }
+  100% {
+    grid-template-columns: 0fr auto 5fr;
+  }
+}
+
+@keyframes close {
+  0% {
+    grid-template-columns: 0fr auto 5fr;
+  }
+  100% {
+    grid-template-columns: 2fr auto 5fr;
   }
 }

@@ -23,6 +23,7 @@ function removeActiveClass() {
     link.classList.remove("active");
   });
 }
+
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
