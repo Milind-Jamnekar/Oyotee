@@ -15,9 +15,16 @@
   --heart-color: #ff6a6b;
   --heart-color-bg: #fff0f1;
 
+  --border-color: #dadada;
+
   --primary-text: #ffffff;
   --secondary-text: #4e4e4e;
   --tertiary-text: #4f4f4f;
+
+  /* Spacing  */
+  --space-1: 2rem 3rem;
+  --space-2: 1rem;
+
   font-family: "Montserrat", sans-serif;
   font-size: 62.5%;
   line-height: 24px;
@@ -40,7 +47,7 @@ header {
   z-index: 1;
   height: 80px;
   width: 100%;
-  border-bottom: 1px solid var(--tertiary-text);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav {
@@ -88,7 +95,7 @@ header {
   display: flex;
   align-items: center;
   height: 100%;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: var(--secondary-text);
   border-bottom: 3px solid transparent;
   padding: 0 15px;
@@ -202,48 +209,41 @@ header {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 2fr auto 5fr;
+  grid-template-columns: 2fr 6fr 4fr;
   height: calc(100vh - 80px);
 }
 
-.wrapper.open {
-  animation-name: open;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.wrapper.close {
-  animation-name: close;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
+/******** Filter section  *******/
 .pr-filter {
-  background-color: #ff6a6b;
+  /* background-color: #ff6a6b; */
+  border-right: 1px solid var(--border-color);
+}
+
+.filter-title {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  padding: var(--space-1);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-cat {
+  padding: var(--space-1);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cat-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-transform: capitalize;
+  margin-bottom: 1.75rem;
 }
 
 .pr-main {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .pr-detail {
-  background-color: #46a357;
-}
-
-@keyframes open {
-  0% {
-    grid-template-columns: 2fr auto 5fr;
-  }
-  100% {
-    grid-template-columns: 0fr auto 5fr;
-  }
-}
-
-@keyframes close {
-  0% {
-    grid-template-columns: 0fr auto 5fr;
-  }
-  100% {
-    grid-template-columns: 2fr auto 5fr;
-  }
+  /* background-color: #46a357; */
 }

@@ -9,6 +9,7 @@
     <meta name="author" content="Milind Jamnekar" />
 
     <!-- Stylesheet and JavaScript imports -->
+    <link rel="stylesheet" href="src/checkbox.css" />
     <link rel="stylesheet" href="src/style.css" />
     <script defer type="module" src="/src/main.ts"></script>
 
@@ -59,7 +60,47 @@
     <!---------- main section  ------------>
     <main class="wrapper">
       <!-- Filter section  -->
-      <aside class="pr-filter"></aside>
+      <aside class="pr-filter">
+        <div class="filter-title">
+          <h3>Filter</h3>
+        </div>
+
+        <div class="filter-cat">
+          <h3 class="cat-title">categories</h3>
+          <div class="control-group">
+            <label class="control control-checkbox">
+              Gardening
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Plants
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Gardening
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Seeds
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Bulbs
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+            <label class="control control-checkbox">
+              Planters
+              <input type="checkbox" checked="checked" />
+              <div class="control_indicator"></div>
+            </label>
+          </div>
+        </div>
+      </aside>
       <!-- main section -->
       <main class="pr-main"></main>
       <!-- product detail section  -->
