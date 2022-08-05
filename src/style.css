@@ -51,6 +51,10 @@
   gap: 1.75rem;
 }
 
+.fill {
+  color: yellow;
+}
+
 /********* Header Section *******/
 header {
   position: relative;
@@ -322,6 +326,20 @@ header {
 .price-range button:focus {
   outline: var(--primary-color) solid 1px;
   outline-offset: 2px;
+}
+
+/* rating section  */
+
+.rating {
+  padding: var(--space-1);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rating-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 1.75rem;
 }
 
 .pr-main {

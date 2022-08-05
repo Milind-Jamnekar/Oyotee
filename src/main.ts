@@ -24,6 +24,26 @@ function removeActiveClass() {
   });
 }
 
+const stars = document.querySelectorAll(".star");
+const rating = document.querySelector(".rating-box");
+
+const fillUpto = (index: number) => {
+  for (let i = 0; i < stars.length; i++) {
+    if (i <= index) {
+      stars[i].classList.add("fill");
+    } else {
+      stars[i].classList.remove("fill");
+    }
+  }
+};
+
+rating?.addEventListener("mouseover", (event) => {
+  const target = event.target;
+  if (target !== null && target.classList.contains("star")) {
+    fillUpto(target.dataset.i);
+  }
+});
+
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
