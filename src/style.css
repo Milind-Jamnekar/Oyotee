@@ -15,14 +15,14 @@
   --heart-color: #ff6a6b;
   --heart-color-bg: #fff0f1;
 
-  --border-color: #dadada;
+  --border-color: #444444;
 
   --primary-text: #ffffff;
   --secondary-text: #4e4e4e;
   --tertiary-text: #4f4f4f;
 
   /* Spacing  */
-  --space-1: 2rem 3rem;
+  --space-1: 2rem 4rem;
   --space-2: 1rem;
 
   font-family: "Montserrat", sans-serif;
@@ -39,6 +39,16 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+.flex {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.gap-1 {
+  gap: 1.75rem;
 }
 
 /********* Header Section *******/
@@ -202,6 +212,8 @@ header {
     background-color: #ffffff;
     --tertiary-text: #c0c0c0;
     --primary-text: #161616;
+
+    --border-color: #dadada;
   }
 }
 
@@ -209,7 +221,7 @@ header {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 2fr 6fr 4fr;
+  grid-template-columns: 2.5fr 6fr 4fr;
   height: calc(100vh - 80px);
 }
 
@@ -238,6 +250,78 @@ header {
   color: var(--primary-text);
   text-transform: capitalize;
   margin-bottom: 1.75rem;
+}
+
+/* Price range section  */
+
+.price-range {
+  padding: var(--space-1);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.price-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  margin-bottom: 1.75rem;
+}
+
+.min-price {
+  text-transform: capitalize;
+  padding: 10px 15px;
+  flex-basis: 50%;
+  border-radius: 15px;
+  font-size: 1.5rem;
+  background-color: var(--secondary-text);
+  text-align: center;
+}
+
+.range {
+  position: relative;
+  border: 1px solid var(--border-color);
+  flex-shrink: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.range span {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  font-size: 1.5rem;
+  transform: translate(-50%, -50%);
+}
+
+.range input {
+  padding: 10px 15px 10px 40%;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  align-self: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.price-range button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  font-style: inherit;
+  font-size: 1.5rem;
+  border: none;
+  transition: all 0.4s;
+}
+
+.price-range button:active,
+.price-range button:hover {
+  background-color: #089d23;
+}
+
+.price-range button:focus {
+  outline: var(--primary-color) solid 1px;
+  outline-offset: 2px;
 }
 
 .pr-main {
