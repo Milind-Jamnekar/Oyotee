@@ -58,7 +58,7 @@
     </header>
 
     <!---------- main section  ------------>
-    <main class="wrapper">
+    <main class="wrapper open">
       <!-- Filter section  -->
       <aside class="pr-filter">
         <div class="filter-title">
@@ -136,7 +136,36 @@
         </div>
       </aside>
       <!-- main section -->
-      <main class="pr-main"></main>
+      <main class="pr-main">
+        <!-- search box icon  -->
+        <div class="search">
+          <ion-icon class="search-icon" name="search-outline"></ion-icon>
+          <input
+            type="search"
+            name="plant_name"
+            id="search"
+            placeholder="type plant name here"
+            value="Monstera"
+          />
+          <ion-icon class="cancel-icon" name="close-outline"></ion-icon>
+        </div>
+
+        <!-- search status section  -->
+        <div class="status">
+          <h2>
+            Search result for "<span class="search-value">Monstera</span>"
+          </h2>
+        </div>
+
+        <!-- sort section  -->
+        <div class="sort">
+          <h2>sort</h2>
+          <button class="relevance active">Relevance</button>
+          <button class="popular">Popular</button>
+          <button class="mostnew">Most New</button>
+          <button class="mostnew">Price</button>
+        </div>
+      </main>
       <!-- product detail section  -->
       <article class="pr-detail"></article>
     </main>

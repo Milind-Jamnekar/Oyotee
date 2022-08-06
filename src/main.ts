@@ -43,7 +43,6 @@ rating?.addEventListener("mouseover", (event) => {
     fillUpto(target.dataset.i);
   }
 });
-
 // document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
